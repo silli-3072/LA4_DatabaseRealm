@@ -13,6 +13,9 @@
 		82394BB428B39E23005957FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82394BB228B39E23005957FD /* Main.storyboard */; };
 		82394BB628B39E24005957FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82394BB528B39E24005957FD /* Assets.xcassets */; };
 		82394BB928B39E24005957FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82394BB728B39E24005957FD /* LaunchScreen.storyboard */; };
+		82394BC228B39EE5005957FD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 82394BC128B39EE5005957FD /* Realm */; };
+		82394BC428B39EE5005957FD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 82394BC328B39EE5005957FD /* RealmSwift */; };
+		82394BC628B3A07D005957FD /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82394BC528B3A07D005957FD /* Memo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,7 @@
 		82394BB528B39E24005957FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82394BB828B39E24005957FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82394BBA28B39E24005957FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82394BC528B3A07D005957FD /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82394BC428B39EE5005957FD /* RealmSwift in Frameworks */,
+				82394BC228B39EE5005957FD /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 				82394BB528B39E24005957FD /* Assets.xcassets */,
 				82394BB728B39E24005957FD /* LaunchScreen.storyboard */,
 				82394BBA28B39E24005957FD /* Info.plist */,
+				82394BC528B3A07D005957FD /* Memo.swift */,
 			);
 			path = DatabaseRealm;
 			sourceTree = "<group>";
@@ -83,6 +90,10 @@
 			dependencies = (
 			);
 			name = DatabaseRealm;
+			packageProductDependencies = (
+				82394BC128B39EE5005957FD /* Realm */,
+				82394BC328B39EE5005957FD /* RealmSwift */,
+			);
 			productName = DatabaseRealm;
 			productReference = 82394BA928B39E23005957FD /* DatabaseRealm.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 82394BA028B39E23005957FD;
+			packageReferences = (
+				82394BC028B39EE5005957FD /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 82394BAA28B39E23005957FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +155,7 @@
 				82394BB128B39E23005957FD /* ViewController.swift in Sources */,
 				82394BAD28B39E23005957FD /* AppDelegate.swift in Sources */,
 				82394BAF28B39E23005957FD /* SceneDelegate.swift in Sources */,
+				82394BC628B3A07D005957FD /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +373,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		82394BC028B39EE5005957FD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		82394BC128B39EE5005957FD /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82394BC028B39EE5005957FD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		82394BC328B39EE5005957FD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82394BC028B39EE5005957FD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 82394BA128B39E23005957FD /* Project object */;
 }
